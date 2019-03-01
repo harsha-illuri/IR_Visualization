@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span.Cognition{
+            background-color: #ccf2ff;
+        }
+        span.Performance{
+            background-color: #ff9966;
+        }
+        span.Coordination{
+            background-color: #ffffcc;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+
+    {% for d in data%}
+        {% for key,value in d.items %}
+              <span class = {{ value.class }}>{{value.text}}</span>
+        {% endfor %}
+        <br/>
+    {% endfor %}
+
+{% endblock %}
+</body>
+</html>
